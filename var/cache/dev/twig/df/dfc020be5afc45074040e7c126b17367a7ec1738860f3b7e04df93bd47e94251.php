@@ -59,7 +59,7 @@ class __TwigTemplate_d915970d6e619d14a60a52540581b0076d09bbd3a0769bf0f601d39b141
         echo "
 <h1>Hello insatien !</h1>
 <p>
-    <h3 class=\"container\">about insat :</h3>
+    <h3 class=\"container\">about INSAT:</h3>
     Lorem ipsum dolor sit , amet consectetur adipisicing elit. Eaque ab beatae necessitatibus ut dolore quibusdam. Id eius libero aliquam molestias.
 </p>
 <p>
@@ -94,7 +94,7 @@ class __TwigTemplate_d915970d6e619d14a60a52540581b0076d09bbd3a0769bf0f601d39b141
 
 <h1>Hello insatien !</h1>
 <p>
-    <h3 class=\"container\">about insat :</h3>
+    <h3 class=\"container\">about INSAT:</h3>
     Lorem ipsum dolor sit , amet consectetur adipisicing elit. Eaque ab beatae necessitatibus ut dolore quibusdam. Id eius libero aliquam molestias.
 </p>
 <p>
