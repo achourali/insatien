@@ -66,6 +66,7 @@ class __TwigTemplate_8663e9730ba01454e8f6664e4802e27f09fed39b531977cf1dbfa3ca6b2
     <h3 class=\"container\">about us :</h3>
     Lorem ipsum dolor sit , amet consectetur adipisicing elit. Eaque ab beatae necessitatibus ut dolore quibusdam. Id eius libero aliquam molestias.
 </p>
+<h1> test test</h1>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -101,6 +102,7 @@ class __TwigTemplate_8663e9730ba01454e8f6664e4802e27f09fed39b531977cf1dbfa3ca6b2
     <h3 class=\"container\">about us :</h3>
     Lorem ipsum dolor sit , amet consectetur adipisicing elit. Eaque ab beatae necessitatibus ut dolore quibusdam. Id eius libero aliquam molestias.
 </p>
+<h1> test test</h1>
 {% endblock %}", "default/home.html.twig", "C:\\Users\\choun\\Documents\\GitHub\\insatien\\templates\\default\\home.html.twig");
     }
 }
