@@ -30,9 +30,9 @@ class DefaultController extends AbstractController
     public function contactUs(){
         return $this->render('default/contactUs.html.twig');
     }
-    
-    /** 
+        /** 
     * @Route("/register", name="register")
+    * @Method({"POST"})
     */
     public function register(){
         return $this->render('default/register.html.twig');

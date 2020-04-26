@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<form action="" method="POST">
+    <div class="form-group">
+        <fieldset>
+          <label class="control-label" for="username">username</label>
+          <input class="form-control" id="readOnlyInput" type="text" placeholder="username" readonly="">
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <label class="control-label" for="readOnlyInput">password</label>
+          <input class="form-control" id="readOnlyInput" type="password" placeholder="password" readonly="">
+        </fieldset>
+      </div>
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@insat.u-carthage.tn">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="form-group">
+        <select class="custom-select">
+          <option selected="">registering as </option>
+          <option value="1">student</option>
+          <option value="2">instructor</option>
+        </select>
+    </div>
+    <legend>choose you group</legend>
+    <div class="form-group">
+      <div class="custom-control custom-radio">
+        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
+        <label class="custom-control-label" for="customRadio1">GL2/1</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+        <label class="custom-control-label" for="customRadio2">GL2/2</label>
+      </div>
+    </div>
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+    </fieldset>
+</form>
+
+{% endblock %}

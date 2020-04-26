@@ -33,6 +33,7 @@ class DefaultController extends AbstractController
     
     /** 
     * @Route("/register", name="register")
+    * @Method({"POST"})
     */
     public function register(){
         return $this->render('default/register.html.twig');
