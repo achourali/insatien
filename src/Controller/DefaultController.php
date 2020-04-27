@@ -6,6 +6,7 @@ use App\Entity\Compte;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\ResetType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Routing\Annotation\Route;
@@ -68,7 +69,7 @@ class DefaultController extends AbstractController
                 ]
             ])
             ->add('sign up',SubmitType::class)
-            ->add('reset',SubmitType::class)
+            ->add('reset',ResetType::class)
             ->getForm();
         ;
 
