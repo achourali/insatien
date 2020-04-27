@@ -3,6 +3,7 @@
 
 /.env
 /var
+/vendor
 
 ###< symfony/framework-bundle ###
 
