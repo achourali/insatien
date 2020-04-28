@@ -2,7 +2,7 @@
 ###> symfony/framework-bundle ###
 
 /.env
-
+/var
 ###< symfony/framework-bundle ###
 
 ###> symfony/web-server-bundle ###

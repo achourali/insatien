@@ -41,10 +41,12 @@ class DefaultController extends AbstractController
     }
 
      /**
-     * @Route("/comfirmation/{username}?", name="comfirmation")
+     * @Route("/comfirmation", name="comfirmation")
      */
-    public function comfirmation(){
-        return $this->render('default/comfirmation.html.twig');
+    public function comfirmation(Request $request){
+        return $this->render('default/comfirmation.html.twig',[
+            "username"=>$request->get('username')
+        ]);
     }
 
     /** 
@@ -87,7 +89,7 @@ class DefaultController extends AbstractController
             $compte->setComfirmation(false);
             $manager->persist($compte);
             $manager->flush();
-            return $this->redirectToRoute('comfirmation', ['username' => $compte->getUsername()]);
+            return $this->redirect('/comfirmation?username='.$compte->getUsername());
         }
 
         return $this->render('default/register.html.twig',[
