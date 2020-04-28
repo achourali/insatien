@@ -3,4 +3,8 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     exception_controller: null
+<<<<<<< HEAD
     form_themes: ['bootstrap_4_layout.html.twig']    
+=======
+    form_themes: ['bootstrap_4_layout.html.twig']
+>>>>>>> 5c6f0715280772b4616c8815a02c2b87a49fd717
