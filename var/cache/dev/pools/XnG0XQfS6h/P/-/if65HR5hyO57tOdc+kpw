@@ -12,7 +12,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 70,
             ],
             'message' => [
-                1 => 'use your in.u-carthage mail ya haj',
+                1 => 'use your insat.u-carthage mail ya haj',
             ],
             'pattern' => [
                 1 => '#@insat.u-carthage.tn#',

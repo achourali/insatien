@@ -9,7 +9,6 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\ResetType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
@@ -59,7 +58,7 @@ class DefaultController extends AbstractController
                     "placeholder"=>"username"
                 ]
             ])
-            ->add('password',PasswordType::class,[
+            ->add('password',TextType::class,[
                 "attr"=>[
                     "placeholder"=>"password"
                 ]

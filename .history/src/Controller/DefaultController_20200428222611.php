@@ -9,7 +9,6 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\ResetType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
@@ -40,13 +39,7 @@ class DefaultController extends AbstractController
         return $this->render('default/contactUs.html.twig');
     }
 
-     /**
-     * @Route("/comfirmation/{username}?", name="comfirmation")
-     */
-    public function comfirmation(){
-        return $this->render('default/comfirmation.html.twig');
-    }
-
+    
     /** 
     * @Route("/register", name="register")
     */
@@ -59,7 +52,7 @@ class DefaultController extends AbstractController
                     "placeholder"=>"username"
                 ]
             ])
-            ->add('password',PasswordType::class,[
+            ->add('password',TextType::class,[
                 "attr"=>[
                     "placeholder"=>"password"
                 ]
@@ -87,7 +80,7 @@ class DefaultController extends AbstractController
             $compte->setComfirmation(false);
             $manager->persist($compte);
             $manager->flush();
-            return $this->redirectToRoute('comfirmation', ['username' => $compte->getUsername()]);
+            return $this->redirect('default/comfirmation.html.twig', ['username' => $compte->getUsername()]);
         }
 
         return $this->render('default/register.html.twig',[

@@ -57,7 +57,10 @@ class __TwigTemplate_c9c873a7b2a0a8f952cee13ee9c58c531bb71db24f37c8413ac7778c7ae
 
         // line 4
         echo "<div class=\"jumbotron\">
-    <h1 class=\"display-3\">Hello (username mahabech yet3ada bel redirection) !</h1>
+    <h1 class=\"display-3\">Hello ";
+        // line 5
+        echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new RuntimeError('Variable "username" does not exist.', 5, $this->source); })()), "html", null, true);
+        echo " !</h1>
         <p class=\"lead\"> A verification link has been sent to you email account .</p>
     <hr class=\"my-4\">
         <p>Check your email account in a few minute later and click on the link to verify your email and continue the registration process.</p>
@@ -88,7 +91,7 @@ class __TwigTemplate_c9c873a7b2a0a8f952cee13ee9c58c531bb71db24f37c8413ac7778c7ae
 
     public function getDebugInfo()
     {
-        return array (  59 => 4,  52 => 3,  35 => 1,);
+        return array (  62 => 5,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -97,7 +100,7 @@ class __TwigTemplate_c9c873a7b2a0a8f952cee13ee9c58c531bb71db24f37c8413ac7778c7ae
 
 {% block body %}
 <div class=\"jumbotron\">
-    <h1 class=\"display-3\">Hello (username mahabech yet3ada bel redirection) !</h1>
+    <h1 class=\"display-3\">Hello {{username}} !</h1>
         <p class=\"lead\"> A verification link has been sent to you email account .</p>
     <hr class=\"my-4\">
         <p>Check your email account in a few minute later and click on the link to verify your email and continue the registration process.</p>
