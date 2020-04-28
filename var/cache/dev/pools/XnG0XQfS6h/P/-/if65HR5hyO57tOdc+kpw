@@ -2,7 +2,8 @@
 
 return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
     $o = [
-        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Regex'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Regex')),
     ],
     null,
     [
@@ -10,10 +11,22 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'length' => [
                 70,
             ],
+            'message' => [
+                1 => 'use your in.u-carthage mail ya haj',
+            ],
+            'pattern' => [
+                1 => '#@insat.u-carthage.tn#',
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                ],
+            ],
         ],
     ],
     [
         $o[0],
+        $o[1],
     ],
     []
 ); }];

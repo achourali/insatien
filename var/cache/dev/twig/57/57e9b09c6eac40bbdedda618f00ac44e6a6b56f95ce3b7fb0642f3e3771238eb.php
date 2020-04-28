@@ -57,7 +57,7 @@ class __TwigTemplate_c9c873a7b2a0a8f952cee13ee9c58c531bb71db24f37c8413ac7778c7ae
 
         // line 4
         echo "<div class=\"jumbotron\">
-    <h1 class=\"display-3\">Hello!</h1>
+    <h1 class=\"display-3\">Hello (username mahabech yet3ada bel redirection) !</h1>
         <p class=\"lead\"> A verification link has been sent to you email account .</p>
     <hr class=\"my-4\">
         <p>Check your email account in a few minute later and click on the link to verify your email and continue the registration process.</p>
@@ -97,7 +97,7 @@ class __TwigTemplate_c9c873a7b2a0a8f952cee13ee9c58c531bb71db24f37c8413ac7778c7ae
 
 {% block body %}
 <div class=\"jumbotron\">
-    <h1 class=\"display-3\">Hello!</h1>
+    <h1 class=\"display-3\">Hello (username mahabech yet3ada bel redirection) !</h1>
         <p class=\"lead\"> A verification link has been sent to you email account .</p>
     <hr class=\"my-4\">
         <p>Check your email account in a few minute later and click on the link to verify your email and continue the registration process.</p>

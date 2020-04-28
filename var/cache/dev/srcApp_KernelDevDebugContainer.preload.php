@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'\\vendor/autoload.php';
-require __DIR__.'/ContainerNW1z3Pi/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerHY0qYou/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -112,6 +112,7 @@ $classes[] = 'Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFacto
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\ManagerConfigurator';
 $classes[] = 'Doctrine\ORM\Tools\AttachEntityListenersListener';
 $classes[] = 'Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer';
+$classes[] = 'Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Command\Proxy\RunDqlDoctrineCommand';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Command\Proxy\RunSqlDoctrineCommand';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Command\Proxy\CreateSchemaDoctrineCommand';
@@ -150,9 +151,11 @@ $classes[] = 'Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpF
 $classes[] = 'Symfony\Component\Form\Extension\HttpFoundation\HttpFoundationRequestHandler';
 $classes[] = 'Symfony\Component\Form\Util\ServerParams';
 $classes[] = 'Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension';
+$classes[] = 'Symfony\Component\Form\Extension\Validator\Type\FormTypeValidatorExtension';
 $classes[] = 'Symfony\Component\Form\Extension\Validator\Type\RepeatedTypeValidatorExtension';
 $classes[] = 'Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidatorExtension';
 $classes[] = 'Symfony\Bridge\Doctrine\Form\DoctrineOrmTypeGuesser';
+$classes[] = 'Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser';
 $classes[] = 'Symfony\Component\HttpKernel\Fragment\InlineFragmentRenderer';
 $classes[] = 'Symfony\Component\HttpKernel\HttpKernel';
 $classes[] = 'Symfony\Component\HttpKernel\Controller\TraceableControllerResolver';
@@ -266,6 +269,16 @@ $classes[] = 'Symfony\Component\HttpKernel\DependencyInjection\LazyLoadingFragme
 $classes[] = 'Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer';
 $classes[] = 'Symfony\Bundle\TwigBundle\TemplateIterator';
 $classes[] = 'Symfony\Component\HttpKernel\EventListener\ValidateRequestListener';
+$classes[] = 'Symfony\Component\Validator\Validator\ValidatorInterface';
+$classes[] = 'Symfony\Component\Validator\ValidatorBuilder';
+$classes[] = 'Symfony\Component\Validator\Validation';
+$classes[] = 'Symfony\Component\Validator\ContainerConstraintValidatorFactory';
+$classes[] = 'Symfony\Bridge\Doctrine\Validator\DoctrineInitializer';
+$classes[] = 'Symfony\Bridge\Doctrine\Validator\DoctrineLoader';
+$classes[] = 'Symfony\Component\Validator\Constraints\EmailValidator';
+$classes[] = 'Symfony\Component\Validator\Constraints\ExpressionValidator';
+$classes[] = 'Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer';
+$classes[] = 'Symfony\Component\Validator\Constraints\NotCompromisedPasswordValidator';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerRunCommand';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStartCommand';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand';
