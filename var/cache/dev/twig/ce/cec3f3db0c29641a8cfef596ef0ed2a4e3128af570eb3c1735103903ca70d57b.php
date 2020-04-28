@@ -60,14 +60,12 @@ class __TwigTemplate_529bc3500a7eb56b7655587e268198913967316200400f608fe4e5743fa
 <h1>Hello insatien !</h1>
 <p>
     <h3 class=\"container\">about INSAT:</h3>
-    Lorem ipsum dolor sit , amet consectetur adipisicing elit. Eaque ab beatae necessitatibus ut dolore quibusdam. Id eius libero aliquam molestias.
+    The National Institute of Applied Sciences and Technology or INSAT is a Tunisian university establishment attached to the University of Carthage.
 </p>
 <p>
     <h3 class=\"container\">about US :</h3>
     Lorem ipsum dolor sit , amet consectetur adipisicing elit. Eaque ab beatae necessitatibus ut dolore quibusdam. Id eius libero aliquam molestias.
 </p>
-<h1> TEST TEST</h1>
-<p> hani kaada nzid f haja okhra</p>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -97,14 +95,12 @@ class __TwigTemplate_529bc3500a7eb56b7655587e268198913967316200400f608fe4e5743fa
 <h1>Hello insatien !</h1>
 <p>
     <h3 class=\"container\">about INSAT:</h3>
-    Lorem ipsum dolor sit , amet consectetur adipisicing elit. Eaque ab beatae necessitatibus ut dolore quibusdam. Id eius libero aliquam molestias.
+    The National Institute of Applied Sciences and Technology or INSAT is a Tunisian university establishment attached to the University of Carthage.
 </p>
 <p>
     <h3 class=\"container\">about US :</h3>
     Lorem ipsum dolor sit , amet consectetur adipisicing elit. Eaque ab beatae necessitatibus ut dolore quibusdam. Id eius libero aliquam molestias.
 </p>
-<h1> TEST TEST</h1>
-<p> hani kaada nzid f haja okhra</p>
 {% endblock %}", "default/home.html.twig", "C:\\Users\\choun\\Documents\\GitHub\\insatien\\templates\\default\\home.html.twig");
     }
 }

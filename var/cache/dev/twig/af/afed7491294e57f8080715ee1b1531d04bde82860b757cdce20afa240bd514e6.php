@@ -68,7 +68,7 @@ class __TwigTemplate_8d42e9402b40aa2b87ea634cd78fd5b51d6b38e0d40136b0e6a9add6f2b
         ";
         // line 15
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 16
+        // line 20
         echo "    </body>
 </html>
 ";
@@ -124,6 +124,11 @@ class __TwigTemplate_8d42e9402b40aa2b87ea634cd78fd5b51d6b38e0d40136b0e6a9add6f2b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
+        // line 16
+        echo "        <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
+<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -141,7 +146,7 @@ class __TwigTemplate_8d42e9402b40aa2b87ea634cd78fd5b51d6b38e0d40136b0e6a9add6f2b
 
     public function getDebugInfo()
     {
-        return array (  121 => 15,  109 => 13,  101 => 7,  94 => 6,  81 => 5,  72 => 16,  70 => 15,  67 => 14,  65 => 13,  60 => 11,  56 => 9,  54 => 6,  50 => 5,  44 => 1,);
+        return array (  128 => 16,  121 => 15,  109 => 13,  101 => 7,  94 => 6,  81 => 5,  72 => 20,  70 => 15,  67 => 14,  65 => 13,  60 => 11,  56 => 9,  54 => 6,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -160,7 +165,11 @@ class __TwigTemplate_8d42e9402b40aa2b87ea634cd78fd5b51d6b38e0d40136b0e6a9add6f2b
         <div class=\"container\">
         {% block body %}{% endblock %}
         </div>
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
+<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
+        {% endblock %}
     </body>
 </html>
 ", "base.html.twig", "C:\\Users\\choun\\Documents\\GitHub\\insatien\\templates\\base.html.twig");

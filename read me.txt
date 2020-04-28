@@ -1,0 +1,5 @@
+insatien.help@gmail.com // mdp="insatienzeda" // taa nbadlouh baad 
+( nbadlouh f .env zeda # For Gmail as a transport, use: "gmail://insatien.help@gmail.com:insatienzeda@localhost")
+
+https://openclassrooms.com/forum/sujet/swiftmailer-symfony-4-gmail-comment-reussir  //reponse taa christouphe 29 octobre 2019 tosslah 
+ 

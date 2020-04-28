@@ -1,0 +1,16 @@
+swiftmailer:
+    url: '%env(MAILER_URL)%'
+    spool: { type: 'memory' }
+    #in case khrebt haja nahiw 12 lignes li taht comment hedha 
+    transport : gmail
+    host: smtp.gmail.com
+    port: 465
+    auth_mode: login
+    username: insatien.help@gmail.com
+    password: insatienzeda
+    encryption: ssl
+    stream_options:
+    ssl:
+    allow_self_signed: true
+    verify_peer: false
+    verify_peer_name: false
