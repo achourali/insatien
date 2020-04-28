@@ -1,0 +1,10 @@
+/.env
+###> symfony/framework-bundle ###
+
+
+
+###< symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###
