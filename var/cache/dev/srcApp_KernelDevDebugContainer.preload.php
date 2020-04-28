@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'\\vendor/autoload.php';
-require __DIR__.'/ContainerCaQVIgg/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerNW1z3Pi/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -16,6 +16,7 @@ $classes[] = 'Symfony\Bundle\TwigBundle\TwigBundle';
 $classes[] = 'Twig\Extra\TwigExtraBundle\TwigExtraBundle';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\DoctrineBundle';
 $classes[] = 'Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle';
+$classes[] = 'Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerNameSubscriber';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
@@ -226,6 +227,17 @@ $classes[] = 'Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStor
 $classes[] = 'Symfony\Component\HttpFoundation\Session\Storage\MetadataBag';
 $classes[] = 'Symfony\Component\HttpKernel\EventListener\SessionListener';
 $classes[] = 'Symfony\Component\HttpKernel\EventListener\StreamedResponseListener';
+$classes[] = 'Symfony\Bundle\SwiftmailerBundle\Command\DebugCommand';
+$classes[] = 'Symfony\Bundle\SwiftmailerBundle\Command\NewEmailCommand';
+$classes[] = 'Symfony\Bundle\SwiftmailerBundle\Command\SendEmailCommand';
+$classes[] = 'Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener';
+$classes[] = 'Swift_Mailer';
+$classes[] = 'Swift_Plugins_MessageLogger';
+$classes[] = 'Swift_Events_SimpleEventDispatcher';
+$classes[] = 'Swift_Transport';
+$classes[] = 'Symfony\Bundle\SwiftmailerBundle\DependencyInjection\SwiftmailerTransportFactory';
+$classes[] = 'Swift_Transport_SpoolTransport';
+$classes[] = 'Swift_MemorySpool';
 $classes[] = 'Twig\Environment';
 $classes[] = 'Symfony\Bundle\TwigBundle\Loader\NativeFilesystemLoader';
 $classes[] = 'Symfony\Bridge\Twig\Extension\ProfilerExtension';
