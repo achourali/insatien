@@ -7,6 +7,6 @@ return [
     'default' => [[], ['_controller' => 'App\\Controller\\DefaultController::index'], [], [['text', '/default']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\DefaultController::home'], [], [['text', '/']], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\DefaultController::contactUs'], [], [['text', '/contact']], [], []],
-    'comfirmation' => [['username'], ['_controller' => 'App\\Controller\\DefaultController::comfirmation'], [], [['text', '?'], ['variable', '/', '[^/]+', 'username'], ['text', '/comfirmation']], [], []],
+    'comfirmation' => [[], ['_controller' => 'App\\Controller\\DefaultController::comfirmation'], [], [['text', '/comfirmation']], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\DefaultController::register'], [], [['text', '/register']], [], []],
 ];

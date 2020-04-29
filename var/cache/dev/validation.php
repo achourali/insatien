@@ -6,11 +6,11 @@ return [[
 
 'Symfony.Component.Form.Form' => 0,
 'IteratorAggregate' => 1,
-'Symfony.Component.Form.FormInterface' => 2,
-'Symfony.Component.Form.ClearableErrorsInterface' => 3,
-'Traversable' => 4,
-'Countable' => 5,
-'ArrayAccess' => 6,
+'Traversable' => 2,
+'Symfony.Component.Form.FormInterface' => 3,
+'Countable' => 4,
+'ArrayAccess' => 5,
+'Symfony.Component.Form.ClearableErrorsInterface' => 6,
 
 ], [
 
@@ -111,10 +111,10 @@ return [[
         [
             'stdClass' => [
                 'name' => [
-                    'Symfony\\Component\\Form\\FormInterface',
+                    'Traversable',
                 ],
                 'defaultGroup' => [
-                    'FormInterface',
+                    'Traversable',
                 ],
             ],
         ],
@@ -131,10 +131,10 @@ return [[
         [
             'stdClass' => [
                 'name' => [
-                    'Symfony\\Component\\Form\\ClearableErrorsInterface',
+                    'Symfony\\Component\\Form\\FormInterface',
                 ],
                 'defaultGroup' => [
-                    'ClearableErrorsInterface',
+                    'FormInterface',
                 ],
             ],
         ],
@@ -151,10 +151,10 @@ return [[
         [
             'stdClass' => [
                 'name' => [
-                    'Traversable',
+                    'Countable',
                 ],
                 'defaultGroup' => [
-                    'Traversable',
+                    'Countable',
                 ],
             ],
         ],
@@ -171,10 +171,10 @@ return [[
         [
             'stdClass' => [
                 'name' => [
-                    'Countable',
+                    'ArrayAccess',
                 ],
                 'defaultGroup' => [
-                    'Countable',
+                    'ArrayAccess',
                 ],
             ],
         ],
@@ -191,10 +191,10 @@ return [[
         [
             'stdClass' => [
                 'name' => [
-                    'ArrayAccess',
+                    'Symfony\\Component\\Form\\ClearableErrorsInterface',
                 ],
                 'defaultGroup' => [
-                    'ArrayAccess',
+                    'ClearableErrorsInterface',
                 ],
             ],
         ],

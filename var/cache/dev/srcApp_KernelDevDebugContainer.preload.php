@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'\\vendor/autoload.php';
-require __DIR__.'/ContainerQ3LAF87/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerNtAhDML/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -21,7 +21,9 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerNameSubscriber';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\DefaultController';
+$classes[] = 'App\Controller\MailingController';
 $classes[] = 'App\Repository\CompteRepository';
+$classes[] = 'App\Repository\ContactMailRepository';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\RedirectController';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\TemplateController';
 $classes[] = 'Symfony\Component\Cache\DoctrineProvider';

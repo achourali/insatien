@@ -10,9 +10,11 @@ return [
     [ // $staticRoutes
         '/default' => [[['_route' => 'default', '_controller' => 'App\\Controller\\DefaultController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\DefaultController::home'], null, null, null, false, false, null]],
-        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\DefaultController::contactUs'], null, null, null, false, false, null]],
         '/comfirmation' => [[['_route' => 'comfirmation', '_controller' => 'App\\Controller\\DefaultController::comfirmation'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\DefaultController::register'], null, null, null, false, false, null]],
+        '/mailing' => [[['_route' => 'mailing', '_controller' => 'App\\Controller\\MailingController::index'], null, null, null, false, false, null]],
+        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\MailingController::register'], null, null, null, false, false, null]],
+        '/feedback' => [[['_route' => 'feedback', '_controller' => 'App\\Controller\\MailingController::feedback'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

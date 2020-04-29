@@ -122,8 +122,8 @@ class __TwigTemplate_63c966ec617d69ab17d34eea0f31f73feb0bb3fb7063a267c594b46463d
                 <abbr title=\"Phone\">(+216)</abbr>98 210 263
             </address>
             <address>
-                <strong>chaima AKKARI</strong><br>
-                <a href=\"mailto:#\">chaima050@gmail.com</a>
+                <!--<strong>chaima AKKARI</strong><br> -->
+                <a href=\"mailto:#\">insatien.help@gmail.com</a>
             </address>
             </form>
         </div>
@@ -220,8 +220,8 @@ class __TwigTemplate_63c966ec617d69ab17d34eea0f31f73feb0bb3fb7063a267c594b46463d
                 <abbr title=\"Phone\">(+216)</abbr>98 210 263
             </address>
             <address>
-                <strong>chaima AKKARI</strong><br>
-                <a href=\"mailto:#\">chaima050@gmail.com</a>
+                <!--<strong>chaima AKKARI</strong><br> -->
+                <a href=\"mailto:#\">insatien.help@gmail.com</a>
             </address>
             </form>
         </div>
