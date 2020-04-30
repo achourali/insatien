@@ -82,7 +82,7 @@ class MailingController extends AbstractController
                 ),
                 'text/html'
             );
-            $mailer->send($msg);
+            $mailer->send($message);
             return $this->redirect('feedback');
         }
 

@@ -65,12 +65,12 @@ class MailingController extends AbstractController
         $mailform->handleRequest($request);
         
         if($mailform->isSubmitted() && $mailform->isValid()){
-           $manager->persist($message);
+            //$contact = $mailform->getData();
+            $manager->persist($message);
             $manager->flush();
-            $contact = $mailform->getData();
             $msg = (new \Swift_Message('Nouveau contact'))
             // On attribue l'expéditeur
-            ->setFrom($message->getEmail())
+            ->setFrom($mailform['email'])
 
             // On attribue le destinataire
             ->setTo('insatien.help@gmail.com')
@@ -78,7 +78,7 @@ class MailingController extends AbstractController
             // On crée le texte avec la vue
             ->setBody(
                 $this->renderView(
-                    'mailing/mail.html.twig', compact('contact')
+                    'emails/contact.html.twig', compact('mailform')
                 ),
                 'text/html'
             );

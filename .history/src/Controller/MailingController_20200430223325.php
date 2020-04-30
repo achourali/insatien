@@ -70,7 +70,7 @@ class MailingController extends AbstractController
             $contact = $mailform->getData();
             $msg = (new \Swift_Message('Nouveau contact'))
             // On attribue l'expéditeur
-            ->setFrom($message->getEmail())
+            ->setFrom($contact['email'])
 
             // On attribue le destinataire
             ->setTo('insatien.help@gmail.com')
@@ -78,11 +78,11 @@ class MailingController extends AbstractController
             // On crée le texte avec la vue
             ->setBody(
                 $this->renderView(
-                    'mailing/mail.html.twig', compact('contact')
+                    'emails/contact.html.twig', compact('contact')
                 ),
                 'text/html'
             );
-            $mailer->send($msg);
+            $mailer->send($message);
             return $this->redirect('feedback');
         }
 

@@ -78,11 +78,11 @@ class MailingController extends AbstractController
             // On crée le texte avec la vue
             ->setBody(
                 $this->renderView(
-                    'mailing/mail.html.twig', compact('contact')
+                    'mailing/mail.html.twig', 'contact' =>$message
                 ),
                 'text/html'
             );
-            $mailer->send($msg);
+            $mailer->send($message);
             return $this->redirect('feedback');
         }
 

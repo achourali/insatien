@@ -30,8 +30,8 @@ class MailingController extends AbstractController
      */
     public function register(Request $request, EntityManagerInterface $manager ,\Swift_Mailer $mailer){
 
-        $message=new ContactMail();
-        $mailform=$this->createFormBuilder($message)
+        $messag=new ContactMail();
+        $mailform=$this->createFormBuilder($messag)
             ->add('fullName',TextType::class,[
                 "attr"=>[
                     "placeholder"=>" add your full name",
@@ -65,12 +65,12 @@ class MailingController extends AbstractController
         $mailform->handleRequest($request);
         
         if($mailform->isSubmitted() && $mailform->isValid()){
-           $manager->persist($message);
-            $manager->flush();
             $contact = $mailform->getData();
+            $manager->persist($messag);
+            $manager->flush();
             $msg = (new \Swift_Message('Nouveau contact'))
             // On attribue l'expéditeur
-            ->setFrom($message->getEmail())
+            ->setFrom($contact['email'])
 
             // On attribue le destinataire
             ->setTo('insatien.help@gmail.com')
@@ -78,7 +78,7 @@ class MailingController extends AbstractController
             // On crée le texte avec la vue
             ->setBody(
                 $this->renderView(
-                    'mailing/mail.html.twig', compact('contact')
+                    'emails/contact.html.twig', compact('contact')
                 ),
                 'text/html'
             );
