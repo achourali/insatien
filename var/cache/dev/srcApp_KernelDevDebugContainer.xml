@@ -2362,17 +2362,17 @@
     <service id="swiftmailer.mailer.default.transport.eventdispatcher" class="Swift_Events_SimpleEventDispatcher" public="false"/>
     <service id="swiftmailer.mailer.default.transport.dynamic" class="Swift_Transport">
       <argument type="collection">
-        <argument key="transport">smtp</argument>
+        <argument key="transport">gmail</argument>
         <argument key="url">%env(MAILER_URL)%</argument>
-        <argument key="username">null</argument>
-        <argument key="password">null</argument>
-        <argument key="host">localhost</argument>
-        <argument key="port">null</argument>
+        <argument key="username">insatien.help@gmail.com</argument>
+        <argument key="password">nirvcskuqsxawwte</argument>
+        <argument key="host">smtp.gmail.com</argument>
+        <argument key="port">465</argument>
         <argument key="timeout">30</argument>
         <argument key="source_ip">null</argument>
         <argument key="local_domain">null</argument>
-        <argument key="encryption">null</argument>
-        <argument key="auth_mode">null</argument>
+        <argument key="encryption">ssl</argument>
+        <argument key="auth_mode">login</argument>
         <argument key="command">/usr/sbin/sendmail -bs</argument>
       </argument>
       <argument type="service" id="router.request_context" on-invalid="null"/>

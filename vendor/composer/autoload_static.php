@@ -64,6 +64,7 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
             'Symfony\\Bundle\\WebServerBundle\\' => 31,
+            'Symfony\\Bundle\\WebProfilerBundle\\' => 33,
             'Symfony\\Bundle\\TwigBundle\\' => 26,
             'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
             'Symfony\\Bundle\\MakerBundle\\' => 27,
@@ -262,6 +263,10 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
         'Symfony\\Bundle\\WebServerBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/web-server-bundle',
+        ),
+        'Symfony\\Bundle\\WebProfilerBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/web-profiler-bundle',
         ),
         'Symfony\\Bundle\\TwigBundle\\' => 
         array (
