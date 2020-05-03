@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\Regex;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\NewCompteRepository")
@@ -129,18 +127,6 @@ class NewCompte
     public function setTried(bool $tried): self
     {
         $this->tried = $tried;
-
-        return $this;
-    }
-
-    public function getRegisterAs(): ?string
-    {
-        return $this->RegisterAs;
-    }
-
-    public function setRegisterAs(string $RegisterAs): self
-    {
-        $this->RegisterAs = $RegisterAs;
 
         return $this;
     }

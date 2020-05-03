@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\NewCompte;
+use App\Entity\Compte;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -34,57 +34,49 @@ class PreSignInController extends AbstractController
     }
 
 
+     /**
+     * @Route("/comfirmation", name="comfirmation")
+     */
+    public function comfirmation(Request $request){
+        return $this->render('default/comfirmation.html.twig',[
+            "username"=>$request->get('username')
+        ]);
+    }
+
     /** 
     * @Route("/register", name="register")
     */
     public function register(Request $request, EntityManagerInterface $manager){
 
-        $compte=new NewCompte();
+        $compte=new Compte();
         $form=$this->createFormBuilder($compte)
-        ->add('firstName',TextType::class,[
-            "attr"=>[
-                "id"=>"defaultRegisterFormFirstName",
-                "class"=>"form-control", 
-                "placeholder"=>"First name"
-            ]
-        ])
-        ->add('lastName',TextType::class,[
-            "attr"=>[
-                "id"=>"defaultRegisterFormLastName",
-                "class"=>"form-control", 
-                "placeholder"=>"Last name"
-            ]
-        ])
-        ->add('password',PasswordType::class,[
-            "attr"=>[
-                "id"=>"defaultRegisterFormPassword",
-                "class"=>"form-control", 
-                "placeholder"=>"Password",
-                "aria-describedby"=>"defaultRegisterFormPasswordHelpBlock"
-            ]
-        ])
-       // ->add('ComfirmPassword',PasswordType::class)
-        ->add('email',TextType::class,[
-            "attr"=>[
-                "id"=>"defaultRegisterFormEmail",
-                "class"=>"form-control mb-4",
-                "placeholder"=>"example@insat.u-carthage.tn"
-            ]
-        ])
-        ->add('RegisterAs',ChoiceType::class,[
-            "choices"=>[
-                "teacher"=>"teacher",
-                "student"=>"student"
-            ],"attr"=>[
-                "class"=>"browser-default custom-select mb-4"
-            ]
-        ])
-        ->add('sign up',SubmitType::class,[
-            "attr"=>[
-                "class"=>"btn btn-info my-4 btn-block" 
-            ]
-        ])
-        ->getForm();
+            ->add('username',TextType::class,[
+                "attr"=>[
+                    "placeholder"=>"username"
+                ]
+            ])
+            ->add('password',PasswordType::class,[
+                "attr"=>[
+                    "placeholder"=>"password"
+                ]
+            ])
+            ->add('email',TextType::class,[
+                "attr"=>[
+                    "placeholder"=>"example@insat.u-carthage.tn"
+                ]
+            ])
+            ->add('type',ChoiceType::class,[
+                "choices"=>[
+                    "teacher"=>"teacher",
+                    "student"=>"student"
+                ],
+                "attr"=>[
+                    "label"=>"I am a :"
+                ]
+            ])
+            ->add('sign up',SubmitType::class)
+            ->add('reset',ResetType::class)
+            ->getForm();
         $form->handleRequest($request);
         
         if($form->isSubmitted() && $form->isValid()){

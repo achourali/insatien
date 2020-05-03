@@ -13,13 +13,12 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/default' => [[['_route' => 'default', '_controller' => 'App\\Controller\\PreSignInController::index'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\PreSignInController::home'], null, null, null, false, false, null]],
-        '/comfirmation' => [[['_route' => 'comfirmation', '_controller' => 'App\\Controller\\PreSignInController::comfirmation'], null, null, null, false, false, null]],
-        '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\PreSignInController::register'], null, null, null, false, false, null]],
-        '/mailing' => [[['_route' => 'mailing', '_controller' => 'App\\Controller\\MailingController::index'], null, null, null, false, false, null]],
+        '/comfirmation' => [[['_route' => 'comfirmation', '_controller' => 'App\\Controller\\MailingController::comfirmation'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\MailingController::register'], null, null, null, false, false, null]],
         '/feedback' => [[['_route' => 'feedback', '_controller' => 'App\\Controller\\MailingController::feedback'], null, null, null, false, false, null]],
+        '/default' => [[['_route' => 'default', '_controller' => 'App\\Controller\\PreSignInController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\PreSignInController::home'], null, null, null, false, false, null]],
+        '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\PreSignInController::register'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

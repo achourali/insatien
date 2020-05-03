@@ -132,16 +132,4 @@ class NewCompte
 
         return $this;
     }
-
-    public function getRegisterAs(): ?string
-    {
-        return $this->RegisterAs;
-    }
-
-    public function setRegisterAs(string $RegisterAs): self
-    {
-        $this->RegisterAs = $RegisterAs;
-
-        return $this;
-    }
 }

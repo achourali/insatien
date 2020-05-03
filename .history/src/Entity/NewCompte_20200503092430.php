@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\Regex;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\NewCompteRepository")
@@ -30,9 +28,6 @@ class NewCompte
 
     /**
      * @ORM\Column(type="string", length=40,unique=true)
-     * @Assert\Regex(
-     * pattern="@insat.u-carthage.com",
-     * message="use your in.u-carthage mail ya haj")
      */
     private $email;
 
@@ -50,11 +45,6 @@ class NewCompte
      * @ORM\Column(type="boolean")
      */
     private $tried;
-
-    /**
-     * @ORM\Column(type="string", length=30)
-     */
-    private $RegisterAs;
 
     public function getId(): ?int
     {
@@ -129,18 +119,6 @@ class NewCompte
     public function setTried(bool $tried): self
     {
         $this->tried = $tried;
-
-        return $this;
-    }
-
-    public function getRegisterAs(): ?string
-    {
-        return $this->RegisterAs;
-    }
-
-    public function setRegisterAs(string $RegisterAs): self
-    {
-        $this->RegisterAs = $RegisterAs;
 
         return $this;
     }
