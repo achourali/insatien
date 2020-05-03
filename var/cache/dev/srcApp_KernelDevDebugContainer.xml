@@ -263,13 +263,6 @@
     <service id="kernel" class="App\Kernel" public="true" synthetic="true">
       <tag name="routing.route_loader"/>
     </service>
-    <service id="App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\DefaultController"/>
-      </call>
-    </service>
     <service id="App\Controller\MailingController" class="App\Controller\MailingController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -277,11 +270,18 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\MailingController"/>
       </call>
     </service>
-    <service id="App\Repository\CompteRepository" class="App\Repository\CompteRepository" autowire="true" autoconfigure="true">
+    <service id="App\Controller\PreSignInController" class="App\Controller\PreSignInController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\PreSignInController"/>
+      </call>
+    </service>
+    <service id="App\Repository\ContactMailRepository" class="App\Repository\ContactMailRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Repository\ContactMailRepository" class="App\Repository\ContactMailRepository" autowire="true" autoconfigure="true">
+    <service id="App\Repository\NewCompteRepository" class="App\Repository\NewCompteRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -2306,7 +2306,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.uI4cnQA"/>
+      <argument type="service" id=".service_locator.vYMfduV"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -2740,16 +2740,16 @@
       <argument>^/((index|app(_[\w]+)?)\.php/)?_wdt</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
     </service>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DefaultController" class="App\Controller\DefaultController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DefaultController" class="App\Controller\DefaultController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\DefaultController" class="App\Controller\DefaultController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MailingController" class="App\Controller\MailingController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MailingController" class="App\Controller\MailingController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\MailingController" class="App\Controller\MailingController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CompteRepository" class="App\Repository\CompteRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\CompteRepository" class="App\Repository\CompteRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PreSignInController" class="App\Controller\PreSignInController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PreSignInController" class="App\Controller\PreSignInController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PreSignInController" class="App\Controller\PreSignInController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ContactMailRepository" class="App\Repository\ContactMailRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ContactMailRepository" class="App\Repository\ContactMailRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\NewCompteRepository" class="App\Repository\NewCompteRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\NewCompteRepository" class="App\Repository\NewCompteRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.CmORmuK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -2960,12 +2960,6 @@
         <argument>make:migration</argument>
       </call>
     </service>
-    <service id=".service_locator.s.tJs.w" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
     <service id=".service_locator.RhZUdb7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -2973,13 +2967,19 @@
         <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.EEBJvpr" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.s.tJs.w" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\DefaultController::register" type="service" id=".service_locator.s.tJs.w"/>
+        <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator..nrId65" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
         <argument key="App\Controller\MailingController::register" type="service" id=".service_locator.RhZUdb7"/>
-        <argument key="App\Controller\DefaultController:register" type="service" id=".service_locator.s.tJs.w"/>
+        <argument key="App\Controller\PreSignInController::register" type="service" id=".service_locator.s.tJs.w"/>
         <argument key="App\Controller\MailingController:register" type="service" id=".service_locator.RhZUdb7"/>
+        <argument key="App\Controller\PreSignInController:register" type="service" id=".service_locator.s.tJs.w"/>
       </argument>
     </service>
     <service id=".service_locator._tpP3ur" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -3049,11 +3049,11 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.uI4cnQA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.vYMfduV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Repository\CompteRepository" type="service" id="App\Repository\CompteRepository"/>
         <argument key="App\Repository\ContactMailRepository" type="service" id="App\Repository\ContactMailRepository"/>
+        <argument key="App\Repository\NewCompteRepository" type="service" id="App\Repository\NewCompteRepository"/>
       </argument>
     </service>
     <service id="logger" class="Symfony\Component\HttpKernel\Log\Logger" public="false"/>
@@ -3070,15 +3070,15 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.vdmMuyE.App\Controller\DefaultController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\DefaultController"/>
-      <argument>App\Controller\DefaultController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.vdmMuyE" method="withContext"/>
-    </service>
     <service id=".service_locator.vdmMuyE.App\Controller\MailingController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\MailingController"/>
       <argument>App\Controller\MailingController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\PreSignInController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\PreSignInController"/>
+      <argument>App\Controller\PreSignInController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -3164,12 +3164,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver" public="false"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver" public="false"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.EEBJvpr"/>
+      <argument type="service" id=".service_locator..nrId65"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.EEBJvpr"/>
+      <argument type="service" id=".service_locator..nrId65"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.LlMuOfi"/>
@@ -3490,7 +3490,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.EEBJvpr"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator..nrId65"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
     <service id=".service_locator.KMLuThm" alias=".service_locator._tpP3ur" public="false"/>
