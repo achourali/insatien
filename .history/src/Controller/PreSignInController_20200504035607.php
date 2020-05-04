@@ -13,7 +13,6 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class PreSignInController extends AbstractController
 {
@@ -115,8 +114,9 @@ class PreSignInController extends AbstractController
             }
             $compte->setConfirmationCode($random_string);
             $compte->setTried(false);
-            $hash = $encoder->encodePassword($compte, $compte->getPassword());
-            $compte->setPassword($hash);
+            
+            
+            
             $manager->persist($compte);
             $manager->flush();
             return $this->redirect('/comfirmation?username='.$compte->getFirstName());

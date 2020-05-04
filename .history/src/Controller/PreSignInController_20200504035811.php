@@ -115,8 +115,9 @@ class PreSignInController extends AbstractController
             }
             $compte->setConfirmationCode($random_string);
             $compte->setTried(false);
-            $hash = $encoder->encodePassword($compte, $compte->getPassword());
-            $compte->setPassword($hash);
+            
+            
+            
             $manager->persist($compte);
             $manager->flush();
             return $this->redirect('/comfirmation?username='.$compte->getFirstName());
