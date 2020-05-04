@@ -17,7 +17,7 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\MailingController::register'], [], [['text', '/contact']], [], []],
     'feedback' => [[], ['_controller' => 'App\\Controller\\MailingController::feedback'], [], [['text', '/feedback']], [], []],
-    'default' => [[], ['_controller' => 'App\\Controller\\PreSignInController::index'], [], [['text', '/default']], [], []],
+    'event' => [[], ['_controller' => 'App\\Controller\\PreSignInController::index'], [], [['text', '/event']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\PreSignInController::home'], [], [['text', '/']], [], []],
     'comfirmation' => [[], ['_controller' => 'App\\Controller\\PreSignInController::comfirmation'], [], [['text', '/comfirmation']], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\PreSignInController::register'], [], [['text', '/register']], [], []],
