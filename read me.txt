@@ -1,15 +1,4 @@
 insatien.help@gmail.com // mdp="insatienzeda" // taa nbadlouh baad 
-( nbadlouh f .env zeda # For Gmail as a transport, use: "gmail://insatien.help@gmail.com:insatienzeda@localhost")
-
-https://openclassrooms.com/forum/sujet/swiftmailer-symfony-4-gmail-comment-reussir  //reponse taa christouphe 29 octobre 2019 tosslah 
-
-fel .env zid hedhi :
-
-###> symfony/swiftmailer-bundle ###
-# For Gmail as a transport, use: "gmail://username:password@localhost"
-# For a generic SMTP server, use: "smtp://localhost:25?encryption=&auth_mode="
-# Delivery is disabled by default via "null://localhost"
-#MAILER_URL=null://localhost
-MAILER_URL=gmail://insatien.help@gmail.com:insatienzeda@localhost
-###< symfony/swiftmailer-bundle ###
+mdp de l'app (swiftmailer) =nirvcskuqsxawwte
+composer install baad kol pull khater zedt security bundle 
  
