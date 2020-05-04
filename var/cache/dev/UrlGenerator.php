@@ -15,6 +15,7 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\MailingController::register'], [], [['text', '/contact']], [], []],
     'feedback' => [[], ['_controller' => 'App\\Controller\\MailingController::feedback'], [], [['text', '/feedback']], [], []],
     'event' => [[], ['_controller' => 'App\\Controller\\PreSignInController::index'], [], [['text', '/event']], [], []],
