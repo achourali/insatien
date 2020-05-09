@@ -6,7 +6,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/annotations": "^1.10",
-        "fungio/google-map-bundle": "^4.3@dev",
         "symfony/asset": "4.4.*",
         "symfony/console": "4.4.*",
         "symfony/dotenv": "4.4.*",
@@ -16,7 +15,6 @@
         "symfony/orm-pack": "^1.0",
         "symfony/security-bundle": "4.4.*",
         "symfony/swiftmailer-bundle": "^3.4",
-        "symfony/templating": "4.4.*",
         "symfony/twig-pack": "^1.0",
         "symfony/validator": "4.4.*",
         "symfony/yaml": "4.4.*"

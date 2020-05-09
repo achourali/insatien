@@ -42,6 +42,7 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
             'Symfony\\Component\\VarExporter\\' => 30,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Validator\\' => 28,
+            'Symfony\\Component\\Templating\\' => 29,
             'Symfony\\Component\\Stopwatch\\' => 28,
             'Symfony\\Component\\Security\\Http\\' => 32,
             'Symfony\\Component\\Security\\Guard\\' => 33,
@@ -86,6 +87,14 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
             'PhpParser\\' => 10,
             'PackageVersions\\' => 16,
         ),
+        'I' => 
+        array (
+            'Ivory\\JsonBuilder\\' => 18,
+        ),
+        'F' => 
+        array (
+            'Fungio\\GoogleMap\\' => 17,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -96,6 +105,7 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
             'Doctrine\\ORM\\' => 13,
             'Doctrine\\Migrations\\' => 20,
             'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\Inflector\\' => 19,
             'Doctrine\\DBAL\\' => 14,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
@@ -181,6 +191,10 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
         'Symfony\\Component\\Validator\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/validator',
+        ),
+        'Symfony\\Component\\Templating\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/templating',
         ),
         'Symfony\\Component\\Stopwatch\\' => 
         array (
@@ -342,6 +356,14 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
         array (
             0 => __DIR__ . '/..' . '/ocramius/package-versions/src/PackageVersions',
         ),
+        'Ivory\\JsonBuilder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fungio/json-builder/src',
+        ),
+        'Fungio\\GoogleMap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fungio/google-map/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
@@ -361,6 +383,10 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
+        ),
+        'Doctrine\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
         ),
         'Doctrine\\DBAL\\' => 
         array (
@@ -417,6 +443,13 @@ class ComposerStaticInit8f1b2b8ac33fc8da11509d89b6f65f92
             'ProxyManager\\' => 
             array (
                 0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
+        ),
+        'F' => 
+        array (
+            'Fungio\\GoogleMapBundle\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/fungio/google-map-bundle',
             ),
         ),
     );
